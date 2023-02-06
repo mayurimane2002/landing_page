@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Landing Page</title>
+  </head>
+  <body bgcolor="black">
+    <div class="container">
+      <div class="header">
+        <img src="images/logo.png" class="logo" />
+        <nav>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">Community</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="btn" id="btn1">Log In</button>
+        <button class="btn" id="btn2">Sign Up</button>
+      </div>
+      <div class="content">
+        <div class="text">
+          <h1>
+            Be Young, Have Fun, <br />
+            <span>Drink Coke</span>
+          </h1>
+          <p>
+            Once you try it, you will love it.
+            Listen to the people who love you. Believe that they are worth living for even when you don't believe it. Seek out the memories depression takes away and project them into the future. Be brave; be strong; take your pills. Exercise because it's good for you even if every step weighs a thousand pounds. Eat when food itself disgusts you. Reason with yourself when you have lost your reason.
+            <br />Originally invited by Ted Ryan, director of Heritage
+            Communications. <br />Delicious and Refreshing!!
+          </p>
+          <button class="btn3">Buy Now</button>
+        </div>
+          <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              
+              <img src="images/img.jpeg" style="width:100%">
+             
+            </div>
+            
+            <div class="mySlides fade">
+             
+              <img src="images/img1.jpeg" style="width:100%">
+             
+            </div>
+            
+            <div class="mySlides fade">
+              
+              <img src="images/img2.jpeg" style="width:100%">
+              
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+            </div><script>
+            let slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }</script>
+      </div>
+    </div>
+  </body>
+</html>
